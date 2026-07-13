@@ -8,6 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Gallium/UI.unity
+    guid: d8e0e95aafd4c8042ab5f5151a46d086
+  - enabled: 1
+    path: Assets/Minato/Character.unity
+    guid: 6f9aa5b10cac11947a68dd5ff4296746
+  - enabled: 1
+    path: Assets/Scenes/environment.unity
+    guid: a1769f9ef212a6341ab36c74b92c9726
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
