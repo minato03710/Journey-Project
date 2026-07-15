@@ -18,6 +18,14 @@ public class Bullet : MonoBehaviour
             speed *
             Time.deltaTime);
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
+    }
 
     void OnBecameInvisible()
     {
