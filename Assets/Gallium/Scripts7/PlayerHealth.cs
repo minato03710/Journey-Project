@@ -5,7 +5,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public bool isDead = false;
 
-    // 受伤后无敌时间
+    // no hurt time
     public float invincibleTime = 1f;
 
     private bool invincible = false;
@@ -19,18 +19,18 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // 只检测蚂蚁
+        // only ant
         if (!other.CompareTag("Enemy"))
             return;
 
-        // 无敌状态下不受伤
+        // no hurt time
         if (invincible)
             return;
 
-        // 尝试移除一节身体
+        // remove body
         bool lostBody = playerController.RemoveBodyPart();
 
-        // 还有身体
+        // have body
         if (lostBody)
         {
             Debug.Log("Lost 1 body part");
@@ -40,7 +40,7 @@ public class PlayerHealth : MonoBehaviour
             return;
         }
 
-        // 没有身体了
+        // no body
         Die();
     }
 
