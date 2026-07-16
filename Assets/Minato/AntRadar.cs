@@ -17,10 +17,7 @@ public class AntRadar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(playerHidden == true) // If the player has entered a shadow, the ant will return to its passive state
-        {
-            antAlert = false;
-        }
+
     }
 
     // Called when a game object comes into contact with the ant radar
