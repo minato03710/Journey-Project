@@ -20,6 +20,9 @@ public class PlayerController : MonoBehaviour
 
     public Transform firePoint;
 
+
+    
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -103,6 +106,21 @@ public class PlayerController : MonoBehaviour
 
         bodyParts.Add(body.transform);
     }
+    public bool RemoveBodyPart()
+    {
+        if (bodyParts.Count <= 0)
+            return false;
+
+        Destroy(bodyParts[bodyParts.Count - 1].gameObject);
+
+        bodyParts.RemoveAt(bodyParts.Count - 1);
+
+        return true;
+    }
+    public int GetBodyCount()
+    {
+        return bodyParts.Count;
+    }
     void Shoot(Vector2 dir)
     {
         if (bodyParts.Count <= 0)
@@ -124,4 +142,5 @@ public class PlayerController : MonoBehaviour
         bullet.GetComponent<Bullet>()
               .SetDirection(dir);
     }
+    
 }
