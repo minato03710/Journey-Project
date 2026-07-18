@@ -25,6 +25,11 @@ public class Bullet : MonoBehaviour
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
+
+        if (other.CompareTag("Obstacle"))
+        {
+            Destroy(gameObject);
+        }
     }
 
     void OnBecameInvisible()
