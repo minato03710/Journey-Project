@@ -9,6 +9,8 @@ public class Leaf : MonoBehaviour
             other.GetComponent<PlayerController>()
                  .Grow();
 
+                 LeafManager.Instance.AddLeaf();
+
             Destroy(gameObject);
         }
     }
