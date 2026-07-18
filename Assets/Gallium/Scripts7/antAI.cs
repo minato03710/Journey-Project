@@ -13,13 +13,23 @@ public class AntAI : MonoBehaviour
 
     void Update()
     {
-        if (player == null)
+        // The ant will chase the player only if they are visible
+        if(!Shadows.playerHidden)
+        {
+            if (player == null)
             return;
 
-        Vector2 direction =
-            (player.position - transform.position).normalized;
+            Vector2 direction =
+                (player.position - transform.position).normalized;
 
-        transform.position +=
-            (Vector3)direction * speed * Time.deltaTime;
+            transform.position +=
+                (Vector3)direction * speed * Time.deltaTime;
+        }
+
+        // If the player is in a shadow
+        if(Shadows.playerHidden)
+        {
+            
+        }
     }
 }
