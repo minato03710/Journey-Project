@@ -20,8 +20,12 @@ public class PlayerController : MonoBehaviour
 
     public Transform firePoint;
 
+    public bool inRiver = false;
 
-    
+    public bool onTurtle = false;
+
+
+
 
     void Start()
     {
@@ -63,6 +67,11 @@ public class PlayerController : MonoBehaviour
         if (Keyboard.current.lKey.wasPressedThisFrame)
         {
             Shoot(Vector2.right);
+        }
+        // river
+        if (inRiver && !onTurtle)
+        {
+            GameManager.Instance.GameOver();
         }
     }
 
@@ -142,5 +151,6 @@ public class PlayerController : MonoBehaviour
         bullet.GetComponent<Bullet>()
               .SetDirection(dir);
     }
+
     
 }
