@@ -3,6 +3,7 @@ using UnityEngine;
 public class AntAI : MonoBehaviour
 {
     public float speed = 2f;
+    public float health = 1f;
 
     private Transform player;
 

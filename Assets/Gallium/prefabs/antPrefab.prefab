@@ -107,6 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AntAI
   speed: 2
+  health: 1
 --- !u!58 &5354313818463612053
 CircleCollider2D:
   m_ObjectHideFlags: 0
