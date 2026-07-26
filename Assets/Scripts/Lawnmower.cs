@@ -59,7 +59,7 @@ public class Lawnmower : MonoBehaviour
             Turning();
         }
 
-        if(collision.gameObject.CompareTag("Right")) // Checks if it is the right boundary
+        else if(collision.gameObject.CompareTag("Right")) // Checks if it is the right boundary
         {
             direction = "Left";
             reachedBoundary = true;
