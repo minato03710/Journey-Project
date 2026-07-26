@@ -4,20 +4,24 @@ public class SkinkMain : MonoBehaviour
 {
 
     public SkinkTail tailCheck; // References SkinkTail script
+    public Animator animator;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
+        animator.SetBool("receivedTail", false);
     }
 
-    void OnTriggerEnter2D()
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        if(CompareTag("Player")) // Checks if player detected
+        if (collision.gameObject.CompareTag("Player")) // Checks if player detected
         {
-            if(tailCheck.foundTail) // If player has found tail
+            Debug.Log("Player not holding tail");
+            if(tailCheck.foundTail) // Checks if player has found tail
             {
-                Debug.Log("Change to flower sprite"); // Start ending
+                Debug.Log("Player holding tail");
+                animator.SetBool("receivedTail", true);
             }
         }
     }
