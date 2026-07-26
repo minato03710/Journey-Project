@@ -16,7 +16,7 @@ public class River : MonoBehaviour
         {
             player.waterTimer += Time.deltaTime;
 
-            if (player.waterTimer >= 1f)
+            if (player.waterTimer >= 0.8f)
             {
                 GameManager.Instance.GameOver();
             }
