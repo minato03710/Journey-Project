@@ -4,29 +4,36 @@ using UnityEngine;
 public class Lawnmower : MonoBehaviour
 {
 
-    Rigidbody2D rb;
+    // Public variables
+
     public bool reachedBoundary; // Checks if boundary reached
     public float horizontalSpeed = 3f;
-    private string direction; // Sets movement direction
-    private bool movingUp = false;
-    private int verticalDirection = -1;
     public float verticalStep = 1f;
     public float verticalSpeed = 2f;
+    public bool flipAsset = false; // Checks if asset visuals need to be flipped
+
+    // Private variables
+
+    Rigidbody2D rb;
+    private bool movingUp = false;
+    private string direction; // Sets next movement direction
+    private SpriteRenderer visualAsset; // Used for flipping asset visuals
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>(); // Gets the lawnmower's Rigidbody
-        direction = "Left";
+        rb = GetComponent<Rigidbody2D>();
+        visualAsset = GetComponent<SpriteRenderer>();
+        direction = "Left"; // Starting movement direction
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!movingUp)
+        if(!movingUp) // Waits for vertical movement to be completed before moving horizontally again
         {
-            transform.Translate(Vector2.right * verticalDirection * horizontalSpeed * Time.deltaTime);
+            Mowing();
         }
 
         if(!reachedBoundary) // If the lawnmower has not reached the boundary yet
@@ -36,26 +43,33 @@ public class Lawnmower : MonoBehaviour
 
         if(reachedBoundary) // If the lawnmower has reached the boundary
         {
-            Turning();
+            StartCoroutine(MoveUpThenTurn());
         }
     }
 
     // When a collision is detected
     private void OnCollisionEnter2D(Collision2D collision)
     {
+
         if(collision.gameObject.CompareTag("Left")) // Checks if it is the left boundary
         {
-            direction = "Right";
+            direction = "Right"; // Move right next
+            reachedBoundary = true;
+            flipAsset = true;
             Turning();
-            Debug.Log("Left detected, turning around");
-            StartCoroutine(MoveUpThenTurn());
         }
 
         if(collision.gameObject.CompareTag("Right")) // Checks if it is the right boundary
         {
             direction = "Left";
+            reachedBoundary = true;
+            flipAsset = false;
             Turning();
-            Debug.Log("Right detected, turning around");
+        }
+
+        else // If it has collided with a game object that isn't a boundary
+        {
+            Destroy(collision.gameObject); // Destroys the object that it collided with
         }
 
     }
@@ -73,11 +87,15 @@ public class Lawnmower : MonoBehaviour
 
             yield return null;
         }
+
+        reachedBoundary = false;
+
     }
 
     // Default state until lawnmower reaches map boundaries
     void Mowing()
     {
+
         if(direction == "Left") // Checks if moving left
         {
             rb.AddForce(Vector2.left);
@@ -93,10 +111,22 @@ public class Lawnmower : MonoBehaviour
     // Called when lawnmower reaches a map boundary
     void Turning()
     {
-        Debug.Log("Turning");
-        // Move up and flip rotation
-        // Flip();
-        Mowing();
+        Flip();
+        StartCoroutine(MoveUpThenTurn());
+    }
+
+    public void Flip()
+    {
+        if(flipAsset)
+        {
+            visualAsset.flipX = true; // Flips asset visuals using the sprite renderer
+        }
+
+        if(!flipAsset)
+        {
+            visualAsset.flipX = false;
+        }
+
     }
 
 }
