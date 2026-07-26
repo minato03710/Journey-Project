@@ -64,4 +64,9 @@ public class PlayerHealth : MonoBehaviour
 
         GameManager.Instance.GameOver();
     }
+
+    public void OnDestroy()
+    {
+        Die();
+    }
 }
