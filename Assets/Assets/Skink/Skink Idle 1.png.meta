@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 3c93a2c8519f14c54969dffaceb24c2e
+guid: 67ddb6de6f78ae149ad1d3616b94b355
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7970352389525548022
-    second: Skink Idle 1_0
+      213: -8115037441520187519
+    second: Skink_Combined-1_0
   - first:
-      213: -7058077583277264217
-    second: Skink Idle 1_1
+      213: 6320771207947524115
+    second: Skink_Combined-1_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -99,11 +99,50 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Skink Idle 1_0
+      name: Skink_Combined-1_0
       rect:
         serializedVersion: 2
         x: 209
@@ -118,14 +157,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a04d4affabe936190800000000000000
-      internalID: -7970352389525548022
+      spriteID: 187c1373178916f80800000000000000
+      internalID: -8115037441520187519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skink Idle 1_1
+      name: Skink_Combined-1_1
       rect:
         serializedVersion: 2
         x: 484
@@ -140,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7a27c9355dbac0e90800000000000000
-      internalID: -7058077583277264217
+      spriteID: 3189a3cbce3e7b750800000000000000
+      internalID: 6320771207947524115
       vertices: []
       indices: 
       edges: []
@@ -150,7 +189,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +199,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Skink Idle 1_0: -7970352389525548022
-      Skink Idle 1_1: -7058077583277264217
+      Skink_Combined-1_0: -8115037441520187519
+      Skink_Combined-1_1: 6320771207947524115
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

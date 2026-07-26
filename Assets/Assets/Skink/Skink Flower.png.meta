@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 096e32e562f5a447da2f665d37951b71
+guid: a780bc20e3a3a0a4197eaae94da00f6b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7555056755073089521
-    second: Skink Flower_0
+      213: -2504897151535840595
+    second: Skink_Combined-3_0
   - first:
-      213: 3942576072546785482
-    second: Skink Flower_1
+      213: -9167166725280837954
+    second: Skink_Combined-3_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -99,11 +99,50 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Skink Flower_0
+      name: Skink_Combined-3_0
       rect:
         serializedVersion: 2
         x: 209
@@ -118,14 +157,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f0004ffd8eb072790800000000000000
-      internalID: -7555056755073089521
+      spriteID: da281dbef41dc3dd0800000000000000
+      internalID: -2504897151535840595
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skink Flower_1
+      name: Skink_Combined-3_1
       rect:
         serializedVersion: 2
         x: 484
@@ -140,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ac81b10ac08d6b630800000000000000
-      internalID: 3942576072546785482
+      spriteID: ebecadede6ea7c080800000000000000
+      internalID: -9167166725280837954
       vertices: []
       indices: 
       edges: []
@@ -160,8 +199,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Skink Flower_0: -7555056755073089521
-      Skink Flower_1: 3942576072546785482
+      Skink_Combined-3_0: -2504897151535840595
+      Skink_Combined-3_1: -9167166725280837954
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
