@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     public bool inRiver = false;
 
     public bool onTurtle = false;
-
+    public float waterTimer = 0f;
 
 
 

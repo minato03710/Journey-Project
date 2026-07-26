@@ -7,15 +7,14 @@ public class TurtleRide : MonoBehaviour
         if (!other.CompareTag("Player"))
             return;
 
-        PlayerController player =
-            other.GetComponent<PlayerController>();
+        PlayerController player = other.GetComponent<PlayerController>();
 
         if (player != null)
         {
             player.onTurtle = true;
-
-            other.transform.SetParent(transform);
         }
+
+        other.transform.SetParent(transform);
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -23,14 +22,13 @@ public class TurtleRide : MonoBehaviour
         if (!other.CompareTag("Player"))
             return;
 
-        PlayerController player =
-            other.GetComponent<PlayerController>();
+        PlayerController player = other.GetComponent<PlayerController>();
 
         if (player != null)
         {
             player.onTurtle = false;
-
-            other.transform.SetParent(null);
         }
+
+        other.transform.SetParent(null);
     }
 }

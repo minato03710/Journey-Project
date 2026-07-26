@@ -2,17 +2,28 @@ using UnityEngine;
 
 public class River : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (!other.CompareTag("Player"))
             return;
 
-        PlayerController player =
-            other.GetComponent<PlayerController>();
+        PlayerController player = other.GetComponent<PlayerController>();
 
-        if (player != null)
+        if (player == null)
+            return;
+
+        if (!player.onTurtle)
         {
-            player.inRiver = true;
+            player.waterTimer += Time.deltaTime;
+
+            if (player.waterTimer >= 1f)
+            {
+                GameManager.Instance.GameOver();
+            }
+        }
+        else
+        {
+            player.waterTimer = 0f;
         }
     }
 
@@ -21,12 +32,11 @@ public class River : MonoBehaviour
         if (!other.CompareTag("Player"))
             return;
 
-        PlayerController player =
-            other.GetComponent<PlayerController>();
+        PlayerController player = other.GetComponent<PlayerController>();
 
         if (player != null)
         {
-            player.inRiver = false;
+            player.waterTimer = 0f;
         }
     }
 }

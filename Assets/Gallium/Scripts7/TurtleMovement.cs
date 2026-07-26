@@ -3,7 +3,6 @@ using UnityEngine;
 public class TurtleMovement : MonoBehaviour
 {
     public Transform pointA;
-
     public Transform pointB;
 
     public float speed = 2f;
@@ -17,21 +16,21 @@ public class TurtleMovement : MonoBehaviour
 
     void Update()
     {
-        transform.position =
-            Vector2.MoveTowards(
-                transform.position,
-                target.position,
-                speed * Time.deltaTime);
-
-        if (Vector2.Distance(
+        transform.position = Vector2.MoveTowards(
             transform.position,
-            target.position)
-            < 0.1f)
+            target.position,
+            speed * Time.deltaTime);
+
+        if (Vector2.Distance(transform.position, target.position) < 0.05f)
         {
-            target =
-                target == pointA
-                ? pointB
-                : pointA;
+            if (target == pointA)
+            {
+                target = pointB;
+            }
+            else
+            {
+                target = pointA;
+            }
         }
     }
 }
