@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a610e10141216344982aecae87f99b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AntAI
-  speed: 2
+  speed: 4.5
   health: 1
 --- !u!58 &5354313818463612053
 CircleCollider2D:
